@@ -45,12 +45,12 @@ long maxid = 0;
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Double Double1=Double.parseDouble(editText01.getText().toString().trim());
-                Double Double2=Double.parseDouble(editText02.getText().toString().trim());
+              //  Double Double1=Double.parseDouble(editText01.getText().toString().trim());
+              //  Double Double2=Double.parseDouble(editText02.getText().toString().trim());
 
-                member.setName(editTextName.getText().toString().trim());
-                member.setDouble1(Double1);
-                member.setDouble2(Double2);
+                member.setName(String.valueOf(maxid));
+                member.setDouble1(9.0);
+                member.setDouble2(8.8);
                 //今はいらない　reff.push().setValue(member);
                 reff.child(String.valueOf(maxid+1)).setValue(member);
 
