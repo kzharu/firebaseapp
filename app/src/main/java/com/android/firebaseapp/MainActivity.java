@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 EditText editTextName,editText01,editText02;
-Button button1,button2,seni;
+Button button1;
 DatabaseReference reff;
 Member member;
 long maxid = 0;
@@ -27,10 +27,7 @@ long maxid = 0;
         super.onCreate(savedInstanceStage);
         setContentView(R.layout.activity_main);
         editTextName=(EditText)findViewById(R.id.editTextName);
-        editText01=(EditText)findViewById(R.id.editText01);
-        editText02=(EditText)findViewById(R.id.editText02);
         button1=(Button)findViewById(R.id.button1);
-        button2=(Button)findViewById(R.id.button2);
         member=new Member();
         reff= FirebaseDatabase.getInstance().getReference().child("トイレ");
         reff.addValueEventListener(new ValueEventListener() {
